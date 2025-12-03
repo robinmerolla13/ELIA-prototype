@@ -209,7 +209,7 @@ if st.button("Envoyer"):
 
         st.session_state.conversation.append({"role":"elia", "text":txt})
 
-    st.experimental_rerun()
+    st.rerun()
 
 # Render conversation
 for msg in st.session_state.conversation[-10:]:
@@ -236,7 +236,7 @@ with colA:
                 "links": aid["links"],
                 "generated_at": datetime.datetime.now().isoformat()
             }
-            st.experimental_rerun()
+            st.rerun()
 
 # Display plan
 with colB:
@@ -267,3 +267,4 @@ with colB:
         st.markdown("</div>", unsafe_allow_html=True)
     else:
         st.info("Aucun plan généré pour le moment.")
+
